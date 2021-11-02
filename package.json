@@ -1,0 +1,50 @@
+{
+  "name": "crypto-supplies",
+  "description": "Cryptocurrency circulating, available and total supplies",
+  "keywords": [
+    "cryptocurrency",
+    "supply",
+    "crypto",
+    "coins"
+  ],
+  "bugs": {
+    "url": "https://github.com/coincheckup/crypto-supplies/issues"
+  },
+  "author": {
+    "name": "CoinCheckup.com",
+    "email": "support@coincheckup.com",
+    "url": "https://coincheckup.com/"
+  },
+  "contributors": [
+    {
+      "name": "Valentin Bora",
+      "email": "valentin@coincheckup.com",
+      "url": "https://coincheckup.com/"
+    }
+  ],
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=6.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coincheckup/crypto-supplies.git"
+  },
+  "homepage": "https://github.com/coincheckup/crypto-supplies",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "cacheman": "^2.2.1",
+    "cacheman-file": "^0.2.1",
+    "chalk": "^2.4.1",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "request-rate-limiter": "^1.0.2",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "doctrine": "^2.1.0",
+    "lodash": "^4.17.10"
+  }
+}
