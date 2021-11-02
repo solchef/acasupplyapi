@@ -359,7 +359,7 @@ yargs.usage('$0 <cmd> [args]')
     .command('serve', 'Start an express.js based web server', (yargs) => {
         yargs.option('port', {
             alias: 'p',
-            default: 3000
+            default: 3001
         })
 
         yargs.option('timeout', {
@@ -437,6 +437,38 @@ yargs.usage('$0 <cmd> [args]')
             })
 
             res.send(result)
+        })
+
+        app.get('/:coinId/csp', async(req, res) => {
+            let opts = {
+                    fallback: argv.fallback
+                },
+                id = req.params.coinId,
+                result = {},
+                meta = {};
+
+            try {
+                meta = await getCoinMeta(id)
+            } catch (e) {
+                res.status(404)
+                    .send(`Coin id ${id} not found`);
+
+                return
+            }
+
+            try {
+                result = await getSupplies(id, opts)
+            } catch (e) {
+                result = e
+            }
+
+            // result = formatResult(id, result, opts)
+
+            // Object.assign(result, {
+            //     meta: meta
+            // })
+
+            res.json(result.c)
         })
 
         let srv = app.listen(argv.port, () => console.log(`Now listening on port ${argv.port}
