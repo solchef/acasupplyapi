@@ -1,8 +1,8 @@
 /**
- * @title Bitcoin
- * @symbol BTC
+ * @title ACA Token
+ * @symbol ACA
  * @implementation Dynamic
- * @cmcId bitcoin
+ * @cmcId aca-token
  */
 
 module.exports = (callback, request) => {
