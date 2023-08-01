@@ -6,7 +6,7 @@
  */
 
 module.exports = (callback, request) => {
-    request('https://api.bscscan.com/api?module=stats&action=tokenCsupply&contractaddress=0x9EB6935AEa6aFb5Bc6d1A74bE0C2F78280ab6448&apikey=ES851E1QZIN1ERWHIGINIEJXP3PZ8Q2ZDM', (error, response, body) => {
+    request('https://api.etherscan.com/api?module=stats&action=tokenCsupply&contractaddress=0x9A3bBC0ee2D6300BcA88c4ff820e2987d62b4f63&apikey=ES851E1QZIN1ERWHIGINIEJXP3PZ8Q2ZDM', (error, response, body) => {
         if (!error && response.statusCode == 200) {
             body = Number(body) / 100000000;
             var res = response.body;
